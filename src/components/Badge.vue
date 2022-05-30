@@ -1,5 +1,5 @@
 <template>
-  <div class="Badge">
+  <div class="Badge d-flex justify-center">
     <div class="Badge__Content">
         <slot>?</slot>
     </div>
@@ -39,6 +39,7 @@
   letter-spacing: 0px;
   color: #00504a;
   display: flex;
+  
 }
 
 .Badge__Content {
