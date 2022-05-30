@@ -12,7 +12,7 @@
           <v-col :sm="12" style="max-width: 285px">
             <FeaturedCard>
               <FeaturedCardTop>
-                <div>Lorem ipsum dolor</div>
+                <div>Persoonlijke punten</div>
                 <FeaturedCardStat>32</FeaturedCardStat>
               </FeaturedCardTop>
               <v-card-text>
