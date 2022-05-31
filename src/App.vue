@@ -24,11 +24,12 @@
               </FeaturedCardTop>
               <v-card-text align="center"> Behaalde punten </v-card-text>
               <v-card-text>
-                <div>
-                  <Badge />
-                </div>
                 <Badge />
+                <v-divider></v-divider>
                 <Badge />
+                <v-divider></v-divider>
+                <Badge />
+                <v-divider></v-divider>
               </v-card-text>
             </FeaturedCard>
           </v-col>
@@ -42,6 +43,7 @@
                   <FeaturedCardTop>
                     <div align="center">
                       <v-img
+                        class="mx-auto"
                         max-height="77"
                         max-width="285"
                         src="PNG/BG-badge-grey.png"
