@@ -1,7 +1,7 @@
 <template>
-  <div class="Badge d-flex justify-center">
+  <div>
     <div class="Badge__Content">
-        <slot>?</slot>
+        <slot>5</slot>
     </div>
 
     <svg
