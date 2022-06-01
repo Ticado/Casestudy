@@ -4,6 +4,9 @@
       value="100"
       :color="randomColor()"
       height="10"
+      position="relative"
+      transform="translateY(50%)"
+      display="flex"
     ></v-progress-linear>
   </div>
 </template>
