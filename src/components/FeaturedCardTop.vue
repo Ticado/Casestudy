@@ -15,10 +15,11 @@
 }
 
 .FeaturedCardTop.locked .FeaturedCardTop__img {
-background: url("PNG/Mask Group 7.png") center center;
+background: url("PNG/Mask Group 7.png") #B8CBDA center center;
 background-size: cover;
 width:100%;
 height: 100%;
+
 }
 
 .FeaturedCardTop.bronze .FeaturedCardTop__img {
@@ -29,14 +30,14 @@ height: 100%;
 }
 
 .FeaturedCardTop.silver .FeaturedCardTop__img {
-background: url("PNG/BG-badge-grey.png") center center;
+background: url("PNG/BG-badge-grey.png") #E8E8E8 center center;
 background-size: cover;
 width:100%;
 height: 100%;
 }
 
 .FeaturedCardTop.gold .FeaturedCardTop__img {
-background: url("PNG/BG-badge-blue.png") center center;
+background: url("PNG/BG-badge-blue.png") #FFE58F center center;
 background-size: cover;
 width:100%;
 height: 100%;
