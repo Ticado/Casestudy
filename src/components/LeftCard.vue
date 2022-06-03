@@ -1,15 +1,15 @@
 <template>
-    <div class="FeaturedCardTop">
+    <div class="LeftCard">
         <slot/>
     </div>
 </template>
 
 <style>
-.LeftCardTop {
-    font: normal normal bold 16px/19px Open Sans;
-    color: white;
-    text-align: center;
-    background: #00504A 0% 0% no-repeat padding-box;
+.LeftCard {
+    color: #ffffff;
+    background: #087164 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 14px #0000000A;
     border-radius: 0px 10px 10px 10px;
-    height:77px;
+    
 }
+</style>

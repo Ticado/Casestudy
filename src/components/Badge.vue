@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <div class="Badge__Content">
+  <div class="Badge">
+    <div class="Badge__Content d-flex align-center">
         <slot>5</slot>
     </div>
 
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="45"
+      width="35"
       height="45"
-      viewBox="0 0 45 45"
+      viewBox="0 0 40 40"
     >
       <defs></defs>
       <g transform="translate(-365.46 -1243.412)">
@@ -39,14 +39,21 @@
   letter-spacing: 0px;
   color: #00504a;
   display: flex;
-  
+  width:35px;
+  height: 45px;
+  margin-bottom: 10px;
 }
 
 .Badge__Content {
-  line-height: 45px;
-  position: absolute;
+  position: absolute;  
   text-align: center;
-  width: 40px;
+  color:#00504A;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 19px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
 }
 
 .a {

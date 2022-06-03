@@ -1,16 +1,26 @@
 <template>
-    <div class="BackgroundShapeBottom">
+    <div class="BottomShape">
         <slot/>
     </div>
 </template>
-
-<style>
-.BackgroundShapeBottom {
-    color: #00504A;
-    background: #E6F3E9 0% 0% no-repeat padding-box;
-    box-shadow: 0px 2px 14px #0000000A;
-    border-radius: 0px 0px 10px 10px;
-    height: 60px
-
+<style scoped>
+.BottomShape--left{
+    z-index: 2;
+    background: #6dc8bf 0% 0% no-repeat padding-box;
+    border-radius: 80px 80px 0px 0px;
+    height: 200px;
+    width: 90%;
+    opacity: 0.2;
+}
+.BottomShape--right{
+    z-index: 1;
+    background: #095c4a 0% 0% no-repeat padding-box;
+    border-radius: 80px 0px 0px 0px;
+    height: 160px;
+    width: 90%;
+    margin-top: -160px;
+    margin-bottom: 0px;
+    float: right;
+    opacity: 1;
 }
 </style>
