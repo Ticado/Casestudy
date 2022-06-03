@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Leeractiviteiten",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"locked",
+      "badge":"locked"
+    },
+    {
+      "id": 2,
+      "title": "Leeractiviteiten",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"bronze",
+      "badge":"bronze"
+    },
+    {
+      "id": 3,
+      "title": "Leerpaden",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"silver",
+      "badge":"silver"
+    },
+    {
+      "id": 4,
+      "title": "Thema leeractiviteiten",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"gold",
+      "badge":"silver"
+    },
+    {
+      "id": 5,
+      "title": "Leerpaden",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"plat",
+      "badge":"plat"
+    },
+    {
+      "id": 6,
+      "title": "Werkvormen",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"blue",
+      "badge":"bblue"
+    },
+    {
+      "id": 7,
+      "title": "Opleiding bekeken",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"red",
+      "badge":"bred"
+    },
+    {
+      "id": 8,
+      "title": "Eerste keer inloggen",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"green",
+      "badge":"bgreen"
+    },
+    {
+      "id": 9,
+      "title": "Leeractiviteiten",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"pink",
+      "badge":"bpink"
+    },
+    {
+      "id": 10,
+      "title": "Leeractiviteiten",
+      "tekst": "Je hebt 2 van de 5 leeractiviteiten afgerond. Rond er 5 af en verdien de bronze badge",
+      "backgroundTop":"purple",
+      "badge":"bpurple"
+    }
+    
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

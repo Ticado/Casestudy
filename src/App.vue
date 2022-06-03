@@ -1,3 +1,19 @@
+<script>
+export default {
+  data: (vm) => ({
+    items: [],
+  }),
+  async created() {
+    this.items = await fetch(`http://localhost:5002/posts`).then((e) =>
+      e.json()
+    );
+  },
+};
+</script>
+
+
+
+
 <template>
   <v-app style="background: #f4f7f6 0% 0% no-repeat">
     <v-main>
@@ -12,7 +28,7 @@
 
         <v-container class="container--cards">
           <v-row>
-            <v-col :sm="12" style="max-width: 285px">
+            <v-col :sm="12" :md="3" style="max-width: 285px">
               <LeftCard>
                 <LeftCardTop>
                   <div>Persoonlijke punten</div>
@@ -49,24 +65,24 @@
               </LeftCard>
             </v-col>
 
-            <v-col :cols="12" md="auto grow" margin>
+            <v-col :cols="9" :md="9"  margin>
               <h1 style="color: #00504a">Behaalde badges</h1>
               <p class="pb-10">
                 Allemaal tekst die ik niet ga schrijven lol haha xd
               </p>
               <v-row>
-                <v-col>
+                <v-col cols="4"  v-for="(item, index) in items" :key="index">
                   <FeaturedCard>
-                    <FeaturedCardTop class="locked">
+                    <FeaturedCardTop :class="item.backgroundTop">
                       <div class="FeaturedCardTop__img"></div>
                     </FeaturedCardTop>
-                    <BadgeImages class="locked">
+                    <BadgeImages :class="item.badge">
                       <div class="BadgeImages__img"></div>
                     </BadgeImages>
                     <ProgressBar></ProgressBar>
                     <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
+                     <div style="font-weight: bold"> {{item.title}} </div>
+                    <div>Je hebt {{item.progress}} van de 5 {{item.title}} afgerond. Rond er 5 af en verdien de {{item.badge}} badge!</div>
                     </v-card-text>
                   </FeaturedCard>
                   <FeaturedCardBottom align="center">
@@ -74,187 +90,6 @@
                   </FeaturedCardBottom>
                 </v-col>
 
-                <v-col>
-                  <FeaturedCard>
-                    <FeaturedCardTop class="bronze">
-                      <div></div>
-                      <div class="FeaturedCardTop__img"></div>
-                    </FeaturedCardTop>
-                    <BadgeImages class="bronze">
-                      <div class="BadgeImages__img"></div>
-                    </BadgeImages>
-                    <ProgressBar> </ProgressBar>
-                    <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
-                    </v-card-text>
-                  </FeaturedCard>
-                  <FeaturedCardBottom align="center">
-                    <v-card-text> Behaald op ??-??-?? </v-card-text>
-                  </FeaturedCardBottom>
-                </v-col>
-
-                <v-col>
-                  <FeaturedCard>
-                    <FeaturedCardTop class="silver">
-                      <div class="FeaturedCardTop__img"></div>
-                    </FeaturedCardTop>
-                    <BadgeImages class="silver">
-                      <div class="BadgeImages__img"></div>
-                    </BadgeImages>
-                    <ProgressBar> </ProgressBar>
-                    <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
-                    </v-card-text>
-                  </FeaturedCard>
-                  <FeaturedCardBottom align="center">
-                    <v-card-text> Behaald op ??-??-?? </v-card-text>
-                  </FeaturedCardBottom>
-                </v-col>
-              </v-row>
-
-              <v-row>
-                <v-col>
-                  <FeaturedCard>
-                    <FeaturedCardTop class="gold">
-                      <div class="FeaturedCardTop__img"></div>
-                    </FeaturedCardTop>
-                    <BadgeImages class="gold">
-                      <div class="BadgeImages__img"></div>
-                    </BadgeImages>
-                    <ProgressBar> </ProgressBar>
-                    <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
-                    </v-card-text>
-                  </FeaturedCard>
-                  <FeaturedCardBottom align="center">
-                    <v-card-text> Behaald op ??-??-?? </v-card-text>
-                  </FeaturedCardBottom>
-                </v-col>
-
-                <v-col>
-                  <FeaturedCard>
-                    <FeaturedCardTop class="plat">
-                      <div class="FeaturedCardTop__img"></div>
-                    </FeaturedCardTop>
-                    <BadgeImages class="plat">
-                      <div class="BadgeImages__img"></div>
-                    </BadgeImages>
-                    <ProgressBar> </ProgressBar>
-                    <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
-                    </v-card-text>
-                  </FeaturedCard>
-                  <FeaturedCardBottom align="center">
-                    <v-card-text> Behaald op ??-??-?? </v-card-text>
-                  </FeaturedCardBottom>
-                </v-col>
-
-                <v-col>
-                  <FeaturedCard>
-                    <FeaturedCardTop class="blue">
-                      <div class="FeaturedCardTop__img"></div>
-                    </FeaturedCardTop>
-                    <BadgeImages class="bblue">
-                      <div class="BadgeImages__img"></div>
-                    </BadgeImages>
-                    <ProgressBar> </ProgressBar>
-                    <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
-                    </v-card-text>
-                  </FeaturedCard>
-                  <FeaturedCardBottom align="center">
-                    <v-card-text> Behaald op ??-??-?? </v-card-text>
-                  </FeaturedCardBottom>
-                </v-col>
-              </v-row>
-
-              <v-row>
-                <v-col>
-                  <FeaturedCard>
-                    <FeaturedCardTop class="red">
-                      <div class="FeaturedCardTop__img"></div>
-                    </FeaturedCardTop>
-                    <BadgeImages class="bred">
-                      <div class="BadgeImages__img"></div>
-                    </BadgeImages>
-                    <ProgressBar> </ProgressBar>
-                    <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
-                    </v-card-text>
-                  </FeaturedCard>
-                  <FeaturedCardBottom align="center">
-                    <v-card-text> Behaald op ??-??-?? </v-card-text>
-                  </FeaturedCardBottom>
-                </v-col>
-
-                <v-col>
-                  <FeaturedCard>
-                    <FeaturedCardTop class="green">
-                      <div class="FeaturedCardTop__img"></div>
-                    </FeaturedCardTop>
-                    <BadgeImages class="bgreen">
-                      <div class="BadgeImages__img"></div>
-                    </BadgeImages>
-                    <ProgressBar> </ProgressBar>
-                    <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
-                    </v-card-text>
-                  </FeaturedCard>
-                  <FeaturedCardBottom align="center">
-                    <v-card-text> Behaald op ??-??-?? </v-card-text>
-                  </FeaturedCardBottom>
-                </v-col>
-
-                <v-col>
-                  <FeaturedCard>
-                    <FeaturedCardTop class="pink">
-                      <div class="FeaturedCardTop__img"></div>
-                    </FeaturedCardTop>
-                    <BadgeImages class="bpink">
-                      <div class="BadgeImages__img"></div>
-                    </BadgeImages>
-                    <ProgressBar> </ProgressBar>
-                    <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
-                    </v-card-text>
-                  </FeaturedCard>
-                  <FeaturedCardBottom align="center">
-                    <v-card-text> Behaald op ??-??-?? </v-card-text>
-                  </FeaturedCardBottom>
-                </v-col>
-              </v-row>
-
-              <v-row>
-                <v-col>
-                  <FeaturedCard>
-                    <FeaturedCardTop class="purple">
-                      <div class="FeaturedCardTop__img"></div>
-                    </FeaturedCardTop>
-                    <BadgeImages class="bpurple">
-                      <div class="BadgeImages__img"></div>
-                    </BadgeImages>
-                    <ProgressBar> </ProgressBar>
-                    <v-card-text align="center">
-                      Tekst
-                      <div>blablablabla</div>
-                    </v-card-text>
-                  </FeaturedCard>
-                  <FeaturedCardBottom align="center">
-                    <v-card-text> Behaald op ??-??-?? </v-card-text>
-                  </FeaturedCardBottom>
-                </v-col>
-
-                <v-col> </v-col>
-
-                <v-col> </v-col>
               </v-row>
               <v-col :cols="12" md="auto grow" margin>
                 <h1 style="color: #00504a">Nog te behalen badges</h1>
@@ -272,7 +107,7 @@
                       </BadgeImages>
                       <ProgressBarLocked></ProgressBarLocked>
                       <v-card-text align="center">
-                        Tekst
+                        <div style="font-weight: bold"></div>
                         <div>blablablabla</div>
                       </v-card-text>
                     </FeaturedCard>
@@ -289,7 +124,7 @@
                       </BadgeImages>
                       <ProgressBarLocked></ProgressBarLocked>
                       <v-card-text align="center">
-                        Tekst
+                        <div style="font-weight: bold"></div>
                         <div>blablablabla</div>
                       </v-card-text>
                     </FeaturedCard>
@@ -305,7 +140,7 @@
                       </BadgeImages>
                       <ProgressBarLocked></ProgressBarLocked>
                       <v-card-text align="center">
-                        Tekst
+                        <div style="font-weight: bold"></div>
                         <div>blablablabla</div>
                       </v-card-text>
                     </FeaturedCard>
@@ -321,17 +156,7 @@
     </v-main>
   </v-app>
 </template>
-<script>
 
-
-export default 
-  {
-  randomColor() {
-    let colors = ["Red", "purple", "Green", "blue", "yellow", "orange"];
-    return colors[Math.floor(math.random() * colors.length)];
-  },
-};
-</script>
 <style>
 .container--cards {
   max-width: 30px 345px 00px 345px;
